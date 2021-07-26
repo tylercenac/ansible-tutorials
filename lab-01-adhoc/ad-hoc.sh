@@ -19,3 +19,27 @@ ansible -m service -a "name=nginx state=started enabled=yes" node00 --become
 ansible -m file -a "path=/home/ec2-user/usingAnsible state=directory" node00 --become
 ansible -m copy -a "src=Vagrantfile dest=/tmp" node00 --become
 
+#1
+
+ansible all -m shell -a "date"
+
+#2 create db group and add remote node to it. verify.
+ansible all -m group -a "name=db"
+
+
+#3
+ansible all -m shell -a "yum install python3 git -y && yum remove python3 git -y"
+
+
+#4
+ansible all -m user -a "name=joe home=/root/"#2
+
+#5 clone github repo
+  
+ansible all -b -m git -a "repo=https://github.com/becloudready/ansible-tutorials.git dest=/tmp version=HEAD"
+
+
+
+#6 fetch .bash_profile from remote node and store it on controller in home directory as remote_node_profile
+
+
