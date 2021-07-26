@@ -1,4 +1,4 @@
-node01 ansible_ssh_host=157.245.88.229 ansible_ssh_user=root ansible_ssh_private_key_file=~/ansible.pem
+node00 ansible_ssh_host=157.245.88.229 ansible_ssh_user=root ansible_ssh_private_key_file=~/ansible.pem
 node02 ansible_ssh_host=134.209.218.208 ansible_ssh_user=ec2-user ansible_ssh_private_key_file=~/ansible.pem
 
 

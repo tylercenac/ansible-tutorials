@@ -21,22 +21,22 @@ ansible -m copy -a "src=Vagrantfile dest=/tmp" node00 --become
 
 #1
 
-ansible all -m shell -a "date"
+#ansible all -m shell -a "date"
 
 #2 create db group and add remote node to it. verify.
-ansible all -m group -a "name=db"
+#ansible all -m group -a "name=db"
 
 
 #3
-ansible all -m shell -a "yum install python3 git -y && yum remove python3 git -y"
+#ansible all -m shell -a "yum install python3 git -y && yum remove python3 git -y"
 
 
 #4
-ansible all -m user -a "name=joe home=/root/"#2
+#ansible all -m user -a "name=joe home=/root/"#2
 
 #5 clone github repo
   
-ansible all -b -m git -a "repo=https://github.com/becloudready/ansible-tutorials.git dest=/tmp version=HEAD"
+#ansible all -b -m git -a "repo=https://github.com/becloudready/ansible-tutorials.git dest=/tmp version=HEAD"
 
 
 
