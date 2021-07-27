@@ -38,5 +38,6 @@
       hostname: 
         name: username
 
-    - debug:
-        var: result
+    - name: Print hostname
+      debug:
+        msg: 'Host: {{ansible_hostname}}'
