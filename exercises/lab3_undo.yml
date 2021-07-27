@@ -1,0 +1,17 @@
+- hosts: two
+  gather_facts: true
+  vars:
+    my_name: Tyler
+  tasks:
+    - yum:
+        name: httpd
+        state: removed
+      when: ansible_distribution == "CentOS"
+
+    - apt:
+        name: apache2
+        state: removed
+        update_cache: yes
+      when: ansible_distribution == "Ubuntu"
+
+
