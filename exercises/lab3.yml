@@ -8,8 +8,10 @@
         state: present
       when: ansible_distribution == "CentOS"
 
-    - name: Install Apache2
-      apt: name=apache2 update_cache=yes state=latest
+    - apt:
+        name: apache2
+        state: present
+        update_cache: yes
       when: ansible_distribution == "Ubuntu"
 
 
