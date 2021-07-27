@@ -36,7 +36,7 @@
     
     - name: Print IPs
       debug:
-        msg: '{{hostvars[inventory_hostname]['ansible_default_ipv4']['address']}}'
+        msg: 'IP: {{hostvars[inventory_hostname][ansible_default_ipv4][address]}}'
 
 
     - name: Set hostname
@@ -45,4 +45,4 @@
 
     - name: Print hostname
       debug:
-        msg: '{{ansible_hostname}}'
+        msg: 'HostName: {{ansible_hostname}}'
