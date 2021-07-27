@@ -9,8 +9,8 @@
       when: ansible_distribution == "CentOS"
 
     - apt:
-        name: apache2
-        state: present
+        pkg: apache2
+        state: absent
       when: ansible_distribution == "Ubuntu"
 
 
