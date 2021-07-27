@@ -4,8 +4,8 @@
     my_name: Tyler
   tasks:
     - yum:
-        pkg: httpd
-        state: installed
+        name: httpd
+        state: present
       when: ansible_distribution == "CentOS"
 
     - apt:
