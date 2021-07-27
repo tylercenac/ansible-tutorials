@@ -7,6 +7,6 @@
   - name: Install Apache httpd
     yum: name=httpd state=present
   - name: Copy the index.html file web dir
-    copy: src=/roles/httpd/templates/index.html dest=/var/www/html/index.html
+    copy: src=./roles/httpd/templates/index.html dest=/var/www/html/index.html
   - name: Start httpd
     service: name=httpd state=started enabled=yes
