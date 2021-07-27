@@ -16,8 +16,6 @@
   tasks:
   - name: Install mysql-server # Naming the task for debug purpose
     yum: name=mysql-server state=present  # Using module ( doing the task )
-  - name: Start mysql-server
-    service: name=mysql-server state=started enabled=yes
 
 - hosts: appservers
   become: true
