@@ -38,5 +38,5 @@
       hostname: 
         name: username
 
-    - name: Display hostname
-      shell: echo $HOSTNAME
+    - debug:
+        var: result
