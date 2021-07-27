@@ -1,6 +1,6 @@
 - hosts: webservers
   vars:
-    user_name: Chandan
+    user_name: Tyler
   tasks:
     - template:
         src: example-template.j2
@@ -9,7 +9,7 @@
 
 - hosts: webservers
   vars:
-    user_name: Chandan
+    user_name: Tyler
   tasks:
     - template:
         src: example-template-2.j2
