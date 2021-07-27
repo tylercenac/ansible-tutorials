@@ -13,11 +13,4 @@
         state: absent
       when: ansible_distribution == "Ubuntu"
 
-    - name: username
-      prompt: Enter a username
-
-    - name: Print username
-      debug:
-        msg: 'Hello {{username}}'
-
 
