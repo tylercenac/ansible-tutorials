@@ -33,3 +33,6 @@
 
     - debug:
         var: hostvars[inventory_hostname]['ansible_default_ipv4']['address']
+
+    - name: Set hostname
+      hostname: username
