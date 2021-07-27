@@ -1,16 +1,10 @@
 ---
 - hosts: webservers  # Host or Group of Selections
-  become: true
-  vars:
-    httpd_port: 8080
   tasks:
   - name: Uninstall httpd # Naming the task for debug purpose
     yum: name=httpd state=removed  # Using module ( doing the task )
 
 - hosts: dbservers  # Host or Group of Selections
-  become: true
-  vars:
-    httpd_port: 8080
   tasks:
   - name: Uninstall mysql # Naming the task for debug purpose
     yum: name=mysql state=removed  # Using module ( doing the task )
