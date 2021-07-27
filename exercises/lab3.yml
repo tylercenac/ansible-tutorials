@@ -26,4 +26,8 @@
       user:
         name: username
 
+    - name: Create file
+      file:
+        path: "/home/ec2-user/{{username}}.txt"
+        state: touch
 
