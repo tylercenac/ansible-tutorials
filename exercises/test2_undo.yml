@@ -1,0 +1,29 @@
+---
+- hosts: webservers  # Host or Group of Selections
+  become: true
+  vars:
+    httpd_port: 8080
+  tasks:
+  - name: Uninstall httpd # Naming the task for debug purpose
+    yum: name=httpd state=removed  # Using module ( doing the task )
+
+- hosts: dbservers  # Host or Group of Selections
+  become: true
+  vars:
+    httpd_port: 8080
+  tasks:
+  - name: Uninstall mysql-server # Naming the task for debug purpose
+    yum: name=mysql-server state=removed  # Using module ( doing the task )
+
+- hosts: appservers
+  become: true
+  tasks:
+  - name: Uninstall default-jdk
+    yum: name=java-1.8.0-openjdk state=removed
+    when: ansible_os_family == "RedHat"
+  - name: Uninstall default-jdk for Debian
+    apt: name=java-1.8.0-openjdk state=removed
+    when: ansible_os_family == "Debian"
+  - name: Uninstall java in amazon linux
+    yum: name=java-1.8.0-openjdk state=removed
+    when: ansible_os_family == "Amazon"
