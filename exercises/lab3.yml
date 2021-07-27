@@ -13,39 +13,4 @@
         state: installed
       when: ansible_distribution == "Ubuntu"
 
-#    Example that prints the loopback address and gateway for each host
-    - debug:
-        msg: "System {{ inventory_hostname }} has uuid {{ ansible_product_uuid }}"
-      when: ansible_product_uuid is defined
-
-    - debug:
-        msg: "System {{ inventory_hostname }} has gateway {{ ansible_default_ipv4.gateway }}"
-      when: ansible_default_ipv4.gateway is defined
-
-    - shell: /usr/bin/uptime
-      register: result
-
-    - debug:
-        var: result
-        
-    - debug:
-        msg: "{{ my_name }}"
-      when: my_name == "beCloudReady"
-
-    - name: Display all variables/facts known for a host
-      debug:
-        var: hostvars[inventory_hostname]
-      
-
-    - name: Display some varialbes variables/facts known for a host
-      debug:
-        var: hostvars[inventory_hostname].ansible_all_ipv4_addresses[0]
-      # when: hostvars[inventory_hostname].ansible_all_ipv4_addresses[0] == "172.31.6.217"
-
-
-- hosts: two
-  name: Setting up the hostnames
-  tasks:
-  - hostname: name="{{ inventory_hostname }}"
-    become: yes
 
