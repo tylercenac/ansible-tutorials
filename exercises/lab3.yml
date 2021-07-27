@@ -24,6 +24,6 @@
 
     - name: Create user
       user:
-        name: {{username}}
+        name: username
 
 
