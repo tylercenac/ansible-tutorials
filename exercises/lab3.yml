@@ -5,6 +5,7 @@
   vars_prompt:
     - name: username
       prompt: Enter a username
+      private: no
   tasks:
     - yum:
         name: httpd
@@ -13,8 +14,7 @@
 
     - apt:
         name: apache2
-        state: installed
-        #state: present
+        state: present
         #update_cache: yes
       when: ansible_distribution == "Ubuntu"
 
