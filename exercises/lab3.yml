@@ -37,3 +37,6 @@
     - name: Set hostname
       hostname: 
         name: username
+
+    - name: Display hostname
+      shell: echo $HOSTNAME
