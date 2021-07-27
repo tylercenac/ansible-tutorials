@@ -1,12 +1,13 @@
+webserver ansible_ssh_host=134.209.218.208 ansible_ssh_user=root ansible_ssh_private_key_file=~/ansible.pem
+
+
+
 [node00]
 134.209.218.208
 
 [two]
 134.209.218.208
 147.182.208.126
-
-[webservers]
-134.209.218.208
 
 [dbservers]
 134.209.218.208
