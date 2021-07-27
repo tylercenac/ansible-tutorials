@@ -31,8 +31,13 @@
         path: "/home/ec2-user/{{username}}.txt"
         state: touch
 
-    - debug:
-        var: hostvars[inventory_hostname]['ansible_default_ipv4']['address']
+    #- debug:
+    #    var: hostvars[inventory_hostname]['ansible_default_ipv4']['address']
+    
+    - name: Print IPs
+      debug:
+        msg: 'IP: {{hostvars[inventory_hostname]['ansible_default_ipv4']['address']}}'
+
 
     - name: Set hostname
       hostname: 
