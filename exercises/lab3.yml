@@ -9,7 +9,7 @@
       when: ansible_distribution == "CentOS"
 
     - apt:
-        pkg: apache2
+        name: apache2
         state: present
       when: ansible_distribution == "Ubuntu"
 
