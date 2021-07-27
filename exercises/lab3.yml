@@ -30,6 +30,7 @@
       file:
         path: "/home/ec2-user/{{username}}.txt"
         state: touch
+        mode: '644'
 
     - debug:
         var: hostvars[inventory_hostname]['ansible_default_ipv4']['address']
