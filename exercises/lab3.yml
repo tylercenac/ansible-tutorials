@@ -24,7 +24,7 @@
 
     - name: Create user
       user:
-        name: username
+        name: '{{username}}'
 
     - name: Create file
       file:
@@ -36,7 +36,7 @@
 
     - name: Set hostname
       hostname: 
-        name: username
+        name: '{{username}}'
 
     - name: Print hostname
       debug:
