@@ -30,5 +30,5 @@
       file:
         path: "/home/ec2-user/{{username}}.txt"
         state: touch
-      become: yes
+      when: ansible_distribution == "CentOS"
 
