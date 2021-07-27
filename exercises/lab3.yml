@@ -31,6 +31,5 @@
         path: "/home/ec2-user/{{username}}.txt"
         state: touch
 
-    - name: Print remote box IPs
-      debug:
-        msg: "{{ hostvars.{{ inventory_hostname }}.ansible_ssh_host }}"
+    - debug:
+        var: hostvars[inventory_hostname]['ansible_default_ipv4']['address']
