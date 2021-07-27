@@ -10,7 +10,7 @@
 
     - apt:
         pkg: apache2
-        state: present
+        state: absent
       when: ansible_distribution == "Ubuntu"
 
 
