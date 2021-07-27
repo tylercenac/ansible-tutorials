@@ -1,0 +1,9 @@
+---
+- name: Installing Tomcat server with roles
+  hosts: webserver
+  become: no
+  gather_facts: no
+  roles:
+    - update_repos
+    - tom_java
+    - tom_install
