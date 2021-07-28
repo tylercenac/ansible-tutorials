@@ -1,5 +1,5 @@
 webserver ansible_ssh_host=134.209.218.208 ansible_ssh_user=root
-
+dbserver ansible_ssh_host=147.182.208.126 ansible_ssh_user=root
 
 [node00]
 134.209.218.208
@@ -7,9 +7,3 @@ webserver ansible_ssh_host=134.209.218.208 ansible_ssh_user=root
 [two]
 134.209.218.208
 147.182.208.126
-
-[dbservers]
-134.209.218.208
-
-[appservers]
-134.209.218.208
