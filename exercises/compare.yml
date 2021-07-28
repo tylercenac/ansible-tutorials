@@ -7,7 +7,7 @@
     y: 55
 
   tasks:
-    - name: Copy condition.j2 to remote node
-      template: 
-        src: demo.j2
-        dest: /tmp/example.txt
+  - name: Copy condition.j2 to remote node
+    template: 
+      src: demo.j2
+      dest: /tmp/example.txt
