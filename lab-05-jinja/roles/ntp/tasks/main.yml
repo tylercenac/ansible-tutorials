@@ -1,6 +1,6 @@
 ---
-- name: Install ntp service
+- name: Install chrony service
   yum: name=chrony state=present
 
-- name: Start ntp service
+- name: Start chronyd service
   service: name=chronyd state=started enabled=yes
