@@ -1,7 +1,6 @@
 ---
 # tasks file for tom_install
 - name: Debugging
-  shell:
   register: result
 
 - name: Downloading required tomcat
