@@ -8,6 +8,6 @@
 
   tasks:
     - name: Copy condition.j2 to remote node
-    template: 
-      src: demo.j2
-      dest: /tmp/example.txt
+      template: 
+        src: demo.j2
+        dest: /tmp/example.txt
