@@ -1,5 +1,5 @@
 ---
-- hosts: webserver
+- hosts: two
   become: true
   roles:
     - ntp

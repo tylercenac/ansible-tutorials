@@ -1,6 +1,11 @@
 ---
-- name: Install httpd server
+- name: Install httpd server on CentOS
   yum: name=httpd state=present
+  when: ansible_distribution == "CentOS"
+
+- name: Install httpd server on Ubuntu
+  apt: name=httpd state=present
+  when: ansible_distribution == "Ubuntu"
 
 - name: Start httpd
   service: name=httpd state=started enabled=yes
