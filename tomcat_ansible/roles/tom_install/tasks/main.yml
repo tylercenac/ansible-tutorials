@@ -1,7 +1,8 @@
 ---
 # tasks file for tom_install
 - name: env test
-  shell: "echo {{env}}"
+  debug:
+    msg: "Environment = {{env}}"
 
 - name: Downloading required tomcat
   get_url:
