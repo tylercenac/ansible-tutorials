@@ -1,4 +1,14 @@
 ---
+#- name: Replace port
+#  template:
+#    src: vars.yml.j2
+#    dest: tom_install/vars/main.yml
+
+- name: Find extra-vars
+  debug:
+    register: result
+
+
 - name: Installing Tomcat on Web Server
   hosts: webserver
   become: no
