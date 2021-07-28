@@ -3,17 +3,11 @@
   yum: name=httpd state=present
   when: ansible_distribution == "CentOS"
 
-- name: Install apache2 server on Ubuntu
-  apt: name=apache2 state=present
-  when: ansible_distribution == "Ubuntu"
 
 - name: Start httpd
   service: name=httpd state=started enabled=yes
   when: ansible_distribution == "CentOS"
 
-- name: Start apache2
-  service: name=apache2 state=started enabled=yes
-  when: ansible_distribution == "Ubuntu"
 
 - name: Update httpd default config
   copy: src=httpd.conf dest=/etc/httpd/conf/
@@ -21,12 +15,11 @@
   notify:
     - Reload httpd configuration
 
-- name: Update apache2 default config
-  copy: src=apache2.conf dest=/etc/apache2/
-  when: ansible_distribution == "Ubuntu"
-  notify:
-    - Reload apache2 configuration
 
 - name: Flush handlers
   meta: flush_handlers
 
+- name: Copy the index files
+  template:
+    dest: /var/www/html/index.html
+    src: index.html.j2
