@@ -1,0 +1,13 @@
+---
+- hosts: webserver
+  gather_facts: false
+  tasks:
+  - name: Install packages
+    yum:
+      name: "{{item}}"
+      state: present
+    with_items:
+    - mlocate
+    - strace
+    - java-1.8.0-openjdk
+    - php55
