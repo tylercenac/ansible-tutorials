@@ -3,8 +3,8 @@
   yum: name=httpd state=present
   when: ansible_distribution == "CentOS"
 
-- name: Install httpd server on Ubuntu
-  apt: name=httpd state=present
+- name: Install apache2 server on Ubuntu
+  apt: name=apache2 state=present
   when: ansible_distribution == "Ubuntu"
 
 - name: Start httpd
