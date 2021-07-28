@@ -11,3 +11,13 @@
     - strace
     - java-1.8.0-openjdk
     - php
+
+  - name: Create directories
+    file:
+      path: "/home/lab4/{{item}}.txt"
+    with_items:
+    - yelp
+    - google
+    - apple
+    - yahoo
+    - allstate
