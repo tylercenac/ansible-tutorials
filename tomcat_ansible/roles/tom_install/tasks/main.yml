@@ -4,6 +4,10 @@
   debug:
     msg: "Environment = {{env}}"
 
+- name: display port
+  debug:
+    msg: "Port = {{tomcat_port}}"
+
 #- name: Replace port
 #  template:
 #    src: ../vars.yml.j2
