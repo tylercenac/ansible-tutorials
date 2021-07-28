@@ -17,6 +17,13 @@
 
 - name: Update httpd default config
   copy: src=httpd.conf dest=/etc/httpd/conf/
+  when: ansible_distribution == "CentOS"
+  notify:
+    - Reload httpd configuration
+
+- name: Update httpd default config
+  copy: src=httpd.conf dest=/etc/apache2/
+  when: ansible_distribution == "Ubuntu"
   notify:
     - Reload httpd configuration
 
