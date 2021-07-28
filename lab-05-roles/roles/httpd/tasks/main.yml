@@ -21,11 +21,11 @@
   notify:
     - Reload httpd configuration
 
-- name: Update httpd default config
-  copy: src=httpd.conf dest=/etc/apache2/
+- name: Update apache2 default config
+  copy: src=apache2.conf dest=/etc/apache2/
   when: ansible_distribution == "Ubuntu"
   notify:
-    - Reload httpd configuration
+    - Reload apache2 configuration
 
 - name: Flush handlers
   meta: flush_handlers
