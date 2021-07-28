@@ -1,0 +1,13 @@
+---
+- hosts: webserver
+  become: true
+  gather_facts: no
+  vars:
+    x: 45
+    y: 55
+
+  tasks:
+    - name: Copy condition.j2 to remote node
+    template: 
+      src: demo.j2
+      dest: /tmp/example.txt
