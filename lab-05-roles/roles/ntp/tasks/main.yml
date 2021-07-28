@@ -3,4 +3,4 @@
   yum: name=chrony state=present
 
 - name: Start ntp service
-  service: name=chrony state=started enabled=yes
+  service: name=chronyd state=started enabled=yes
