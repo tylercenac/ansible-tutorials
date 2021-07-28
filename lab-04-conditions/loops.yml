@@ -1,5 +1,5 @@
 ---
-- hosts: node01
+- hosts: webserver
   gather_facts: false
   tasks:
   - name: Create files on loop
