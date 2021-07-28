@@ -7,4 +7,5 @@
 
 - hosts: dbserver
   become: true
-  roles: db
+  roles: 
+    - db
