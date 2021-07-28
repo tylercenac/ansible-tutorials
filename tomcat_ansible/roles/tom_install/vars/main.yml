@@ -6,9 +6,9 @@ tomcat_url: http://mirrors.estointernet.in/apache/tomcat/tomcat-{{req_tomcat_ver
 
 tomcat_port: >
               "{% if env == 'uat' %}
-                  8085
+                  '8085'
                {% elif env == 'prod' %}
-                  8090
+                  '8090'
                {% else %}
-                  8082
+                  '8082'
                {% endif %}"
