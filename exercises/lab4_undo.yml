@@ -2,7 +2,7 @@
 - hosts: webserver
   gather_facts: false
   tasks:
-  - name: Install packages
+  - name: Uninstall packages
     yum:
       name: "{{item}}"
       state: removed
@@ -12,7 +12,7 @@
     - java-1.8.0-openjdk
     - php
 
-  - name: Create directories
+  - name: Delete directories
     file:
       path: "/home/lab4/{{item}}"
       state: absent
