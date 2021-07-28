@@ -4,8 +4,7 @@
 #    src: vars.yml.j2
 #    dest: tom_install/vars/main.yml
 
-- name: Find extra-vars
-  debug:
+- debug:
     var: result
 
 
