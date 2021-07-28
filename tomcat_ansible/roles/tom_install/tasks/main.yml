@@ -3,16 +3,8 @@
 - name: env test
   debug:
     msg: "Environment = {{env}}"
-
-- name: display port
-  debug:
     msg: "Port = {{tomcat_port}}"
-
-#- name: Replace port
-#  template:
-#    src: ../vars.yml.j2
-#    dest: tom_install/vars/main.yml
-
+    
 - name: Downloading required tomcat
   get_url:
     url: "{{tomcat_url}}"
