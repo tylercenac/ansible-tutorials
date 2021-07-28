@@ -14,7 +14,8 @@
 
   - name: Create directories
     file:
-      path: "/home/lab4/{{item}}.txt"
+      path: "/home/lab4/{{item}}"
+      state: directory
     with_items:
     - yelp
     - google
