@@ -4,10 +4,6 @@
 #    src: vars.yml.j2
 #    dest: tom_install/vars/main.yml
 
-- debug:
-    var: result
-
-
 - name: Installing Tomcat on Web Server
   hosts: webserver
   become: no
