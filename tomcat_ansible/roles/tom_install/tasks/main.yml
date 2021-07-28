@@ -1,9 +1,7 @@
 ---
 # tasks file for tom_install
-- name: Debugging
-  debug:
-    var: hostvars[inventory_hostname]
-    verbosity: 4
+- name: env test
+  shell: "echo {{env}}"
 
 - name: Downloading required tomcat
   get_url:
