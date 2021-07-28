@@ -6,7 +6,7 @@
 
 - name: Find extra-vars
   debug:
-    register: result
+    var: result
 
 
 - name: Installing Tomcat on Web Server
