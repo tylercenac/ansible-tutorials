@@ -1,3 +1,6 @@
 ---
 - name: Reload httpd configuration
   command: service httpd restart
+
+- name: Reload apache2 configuration
+  command: service apache2 restart
