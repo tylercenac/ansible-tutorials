@@ -4,10 +4,10 @@
   debug:
     msg: "Environment = {{env}}"
 
-- name: Replace port
-  template:
-    src: vars.yml.j2
-    dest: tom_install/vars/main.yml
+#- name: Replace port
+#  template:
+#    src: ../vars.yml.j2
+#    dest: tom_install/vars/main.yml
 
 - name: Downloading required tomcat
   get_url:
