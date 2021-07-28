@@ -1,0 +1,3 @@
+---
+- name: Install mysql-server on Ubuntu
+  yum: name=mysql-server state=present

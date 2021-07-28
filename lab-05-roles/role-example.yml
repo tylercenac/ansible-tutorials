@@ -4,3 +4,8 @@
   roles:
     - ntp
     - httpd
+
+- hosts: dbserver
+  become: true
+  roles: 
+    - db
