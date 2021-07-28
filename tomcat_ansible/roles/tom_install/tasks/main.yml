@@ -1,10 +1,13 @@
 ---
 # tasks file for tom_install
-- name: env test
+- name: Display Env
   debug:
     msg: "Environment = {{env}}"
+
+- name: Display Port
+  debug:
     msg: "Port = {{tomcat_port}}"
-    
+
 - name: Downloading required tomcat
   get_url:
     url: "{{tomcat_url}}"
