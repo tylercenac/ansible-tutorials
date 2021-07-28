@@ -1,8 +1,8 @@
 ---
 # tasks file for tom_install
 - name: Debugging
-  debug:
-    var: result
+  shell:
+  register: result
 
 - name: Downloading required tomcat
   get_url:
