@@ -1,6 +1,10 @@
 ---
-- hosts: webservers
+- hosts: webserver
   become: true
   roles:
     - ntp
     - httpd
+
+- hosts: dbserver
+  become: true
+  roles: db
