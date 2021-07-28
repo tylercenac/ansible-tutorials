@@ -10,4 +10,4 @@
     - mlocate
     - strace
     - java-1.8.0-openjdk
-    - php55
+    - php
