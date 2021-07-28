@@ -1,0 +1,15 @@
+---
+- hosts: 157.245.88.229
+  tasks:
+    - hostname:
+        name: 'controller'
+
+- hosts: 134.209.218.208
+  tasks:
+    - hostname:
+        name: 'node1'
+
+- hosts: 147.182.208.126
+  tasks:
+    - hostname:
+        name: 'node2'
